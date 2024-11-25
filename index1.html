@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        *{
+            font-family: 'pointer',sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        nav{
+            width: 110%;
+            height: 100px;
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 0px 50px 0px 100px;
+            
+        }
+        nav .logo{
+            left: -30px;
+            font-size: 33px;
+            color: white;
+            font-weight: 600;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+        nav ul li{
+            margin: 0 10px;
+        }
+        nav ul li a{
+            color:#fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 8px 10px;    
+        }
+        nav ul li a:hover{
+            color: #000;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        nav .menu-btn i{
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #click{
+            display: none;
+        }
+        @media (max-width:940px) {
+            nav .menu-btn i{
+                display: block;
+            }
+            #click:checked ~.menu-btn i:before{
+                content: "\f00d";
+            }
+
+            nav ul{
+                position: fixed;
+                top: 80px;
+                left:-100%;
+                background-color: #111;
+                height: 100%;
+                width: 100%;
+                display: block;
+                text-align: center;
+                transition: all 0.3s ease;
+                
+            }
+        #click:checked ~ ul{
+                left: 0%;
+            }
+         nav ul li{
+                margin-top: 50px 0;
+            }
+            
+           
+          }
+        nav ul li a{
+            font-size: 30px;
+            display: block;
+
+          }
+          .box1{
+            width: 100%;
+            height: 100%;
+            /* box-shadow: 0px 20px 30px rgb(146, 141, 141);
+            float: left; */
+            margin-top: 15px;
+          }
+          .box2{
+            width: 520px;
+            height: 240px;
+            box-shadow: 0px 20px 30px rgb(146, 141, 141);
+            float: left;
+            margin-left: 30px;
+            margin-top: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+ 
+          }
+          img{
+            width: 520px;
+            height: 240px;
+            border-radius: 10px;
+          }
+          .box2:hover{
+            background-color: white;  
+          }
+          
+          @media (max-width:940px){
+            .box2{
+                width: 335px;
+                height: 200px;
+                margin-top: 10px;
+                margin-left: 0px;
+
+            }
+            .box1{
+                width: 100%;
+                height: 161%;
+                margin: 20px 20px 20px opx;
+
+            }
+        
+            img{
+                width: 387px;
+                height: 201px;
+                margin-top: 0px;
+                margin-left: auto;
+
+            }
+
+          }
+          .footer {
+           background-color: #333;
+           color: #fff;
+           padding: 20px;
+           text-align: center;
+           margin-top: 200px;
+    
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+          flex: 1;
+          padding: 10px;
+          min-width: 200px;
+        }
+
+       .footer-section h3 {
+          font-size: 1.2em;
+          margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+       .footer-section ul li {
+           margin: 5px 0;
+        }
+
+        .footer-section a {
+           color: #fff;
+           text-decoration: none;
+        }
+
+        .footer-section a:hover {
+           text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+       /* Responsive Styles */
+        @media (max-width: 940px) {
+        .footer{
+           margin-top: 1500px;
+           width: 110%;
+        }
+        .footer-container {
+           flex-direction: column;
+           align-items: center;
+        
+       }
+
+       .footer-section {
+           text-align: center;
+           margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+          font-size: 1em;
+        }
+        }
+
+       @media (max-width: 480px) {
+         .footer-container {
+           padding: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1em;
+    }
+    }
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Gallery</div>
+        <input type="checkbox" id="click" >
+        <label for="click" class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="https://www.amazon.com" target="_blank">Home</a></li>
+            <li><a href="https://www.youtube.com" target="_blank">About</a></li>
+            <li><a href="https://www.freepik.com/free-vector/hand-drawn-flat-autumn-background_18778861.htm#fromView=search&page=1&position=1&uuid=3f65a99b-975f-4830-8f62-2d2811f4375d">Services</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="">project</a></li>
+            <li><a href="#Languages">Languages</a>
+                <li class="lo">Hindi</li>
+                <li class="lo">english</li>
+            </li>
+        </ul>
+    </nav>
+    <div class="box1">
+        <div class="box2">
+            <img src="26.jpg" alt="">
+            1
+        </div>
+        <div class="box2" id="box3">
+            <img src="28.webp" alt="">
+        </div>
+        <div class="box2">
+            <img src="27.webp" alt="">
+        </div>
+        <div class="box2" id="box3">
+            <img src="30.jpg" alt="">
+        </div>
+        <div class="box2">
+            <img src="29.webp" alt="">
+        </div>
+        <div class="box2" id="box3">
+            <img src="31.avif" alt="">
+        </div>
+        <div class="box2">
+            <img src="31.avif" alt="">
+        </div>
+        <div class="box2" id="box3">
+            <img src="32.jpg" alt="">
+            
+        </div>
+        <div class="box2">
+            <img src="360_F_858189072_YBzqFPoX8OF3jUhK7tUiyEJNa79En3hQ.jpg" alt="">
+        </div>
+        <div class="box2" id="box3">
+            <img src="aaa1.jpeg" alt="">
+        </div>
+        <div class="box2">
+            <img src="aaaa.jpeg" alt="">
+        </div>
+        <div class="box2" id="box3">
+            <img src="aaaa5.jpeg" alt="">
+        </div>
+    </div>
+    <footer class="footer" id="footer1">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a leading company in our industry.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Address</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://Facebook.com">Facebook</a></li>
+                    <li><a href="https://Twitter.com">Twitter</a></li>
+                    <li><a href="https://Instagram.com">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>  
+</body>
+</html>
